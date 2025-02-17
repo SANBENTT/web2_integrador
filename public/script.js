@@ -168,7 +168,7 @@ function cargarImagenesAdicionales() {
     });
 }
 
-if (window.location.pathname.includes("/verimagenes.html")) {
+if (window.location.pathname.includes("verimagenes.html")) {
   cargarImagenesAdicionales();
 }
 
