@@ -131,9 +131,8 @@ function setupPagination(totalItems) {
 
 
 function verMasImagenes(objectId) {
-  window.location.href = `/verImagenes.html?objectId=${objectId}`;
+  window.location.href = `verImagenes.html?objectId=${objectId}`;
 }
-
 
 function buildImageElement(imgUrl) {
   const image = document.createElement("img");
@@ -168,7 +167,7 @@ function cargarImagenesAdicionales() {
     });
 }
 
-if (window.location.pathname.includes("G:\ULP\museo_integrador\public\verimagenes.html")) {
+if (window.location.pathname.includes("/verImagenes.html")) {
   cargarImagenesAdicionales();
 }
 
