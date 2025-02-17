@@ -1,5 +1,6 @@
 {
-  "rewrites": [
-    { "source": "/verimagenes", "destination": "/verimagenes.html" }
+  "routes": [
+    { "src": "/verimagenes", "dest": "/verimagenes.html" }
   ]
 }
+
