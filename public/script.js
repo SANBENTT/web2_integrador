@@ -168,7 +168,7 @@ function cargarImagenesAdicionales() {
     });
 }
 
-if (window.location.pathname.includes("public\verimagenes.html")) {
+if (window.location.pathname.includes("G:\ULP\museo_integrador\public\verimagenes.html")) {
   cargarImagenesAdicionales();
 }
 
