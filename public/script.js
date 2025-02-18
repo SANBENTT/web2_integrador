@@ -167,7 +167,7 @@ function cargarImagenesAdicionales() {
     });
 }
 
-if (window.location.pathname.includes("/verImagenes.html")) {
+if (window.location.pathname.includes("verImagenes.html")) {
   cargarImagenesAdicionales();
 }
 
@@ -240,7 +240,7 @@ document.getElementById("buscar").addEventListener("click", (event) => {
     alert("Debe ingresar al menos un criterio de búsqueda adicional (departamento o localización)");
     return;
   }
-  // Ejecutar la búsqueda
+  // Ejecutar la busqueda
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
