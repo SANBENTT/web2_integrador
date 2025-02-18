@@ -1,8 +1,5 @@
 {
-  "routes": [
-    {
-      "src": "/verImagenes.html",
-      "dest": "/verImagenes.html"
-    }
+  "rewrites": [
+    { "source": "/verImagenes.html", "destination": "/public/verImagenes.html" }
   ]
 }
