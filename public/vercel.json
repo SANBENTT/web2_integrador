@@ -1,5 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/verImagenes.html", "destination": "/public/verImagenes.html" }
-  ]
-}
