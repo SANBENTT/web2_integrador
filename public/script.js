@@ -212,29 +212,22 @@ fetch(URL_SEARCH_HASIMAGE).then((response)=> response.json()).then((data)=>{
 document.getElementById("buscar").addEventListener("click", (event) => {
   event.preventDefault();
 
-
   const departamento = document.getElementById("departamento").value;
   const keyword = document.getElementById("keyword").value;
   const localizacion = document.getElementById("localizacion").value;
-
 
   if (!departamento && !keyword && !localizacion) {
     alert("Debe ingresar al menos un criterio de búsqueda");
     return;
   }
 
+  const url = new URL(URL_SEARCH);
+  url.searchParams.set("hasImages", true);
   
-  const url = new URL(URL_SEARCH);  
-  url.searchParams.set("hasImages", true);  
-  if (keyword) url.searchParams.set("q", keyword);  
-  if (departamento) url.searchParams.set("departmentId", departamento);  
-  if (localizacion) url.searchParams.set("geoLocation", localizacion);  
- 
-  if (!departamento && !keyword && !localizacion) {
-    alert("Debe ingresar al menos un criterio de búsqueda (palabra clave, departamento o localización)");
-    return;
-  }
-  // Ejecutar la busqueda
+  if (keyword) url.searchParams.set("q", keyword);
+  if (departamento) url.searchParams.set("departmentId", departamento);
+  if (localizacion) url.searchParams.set("geoLocation", localizacion);
+
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
@@ -243,10 +236,10 @@ document.getElementById("buscar").addEventListener("click", (event) => {
         return;
       }
 
-      objectIDsGlobal = data.objectIDs; 
-      currentPage = 1; 
-      fetchObjetosWithPagination(currentPage); 
-      setupPagination(objectIDsGlobal.length); 
+      objectIDsGlobal = data.objectIDs;
+      currentPage = 1;
+      fetchObjetosWithPagination(currentPage);
+      setupPagination(objectIDsGlobal.length);
     })
     .catch((error) => {
       console.error("Error:", error);
