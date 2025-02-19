@@ -230,14 +230,8 @@ document.getElementById("buscar").addEventListener("click", (event) => {
   if (departamento) url.searchParams.set("departmentId", departamento);  
   if (localizacion) url.searchParams.set("geoLocation", localizacion);  
  
-  if (!keyword) {
-    alert("Por favor, ingrese una palabra clave para la búsqueda.");
-    return; 
-  }
-
-  
-  if (!departamento && !localizacion) {
-    alert("Debe ingresar al menos un criterio de búsqueda adicional (departamento o localización)");
+  if (!departamento && !keyword && !localizacion) {
+    alert("Debe ingresar al menos un criterio de búsqueda (palabra clave, departamento o localización)");
     return;
   }
   // Ejecutar la busqueda
