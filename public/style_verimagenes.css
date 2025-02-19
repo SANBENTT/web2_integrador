@@ -19,6 +19,7 @@ h1 {
     font-size: 2em;
     margin-bottom: 20px;
     color: #fff; 
+    background-color: black;
 }
 
 
@@ -28,6 +29,7 @@ h1 {
     color: #fff; 
     margin-bottom: 20px; 
     text-align: center; 
+    background-color: black;
 }
 
 
