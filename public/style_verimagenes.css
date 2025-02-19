@@ -1,7 +1,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image:url(fondo-imagenes.jpg) ; 
+    background-image:url(fondoimagenn.jpg) ; 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,8 +18,7 @@ body {
 h1 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #fff; 
-    background-color: black;
+    color: black; 
 }
 
 
